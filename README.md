@@ -1,3 +1,2 @@
 # startpage
-[startpage / homepage
-](https://zuyoo.github.io/startpage/)
+https://zuyoo.github.io/startpage
