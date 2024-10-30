@@ -1,0 +1,119 @@
+/* General styling */
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #11111b; /* Background color for the page */
+}
+
+/* Container styling */
+.container {
+    width: 700px; /* Width of the container */
+    height: 400px; /* Height of the container */
+    max-width: calc(100% - 20px); /* Maximum width of the container */
+    max-height: calc(100% - 20px); /* Maximum height of the container */
+    background-color: #181825; /* Background color of the container */
+    border-radius: 10px; /* Rounded corners */
+    border: solid 2px #cba6f7; /* Border styling */
+    position: absolute; /* Use relative positioning */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Image container styling */
+.image-container {
+    width: calc(100% - 20px); /* Width of image container with padding */
+    height: 180px; /* Fixed height for the image */
+    margin: 10px; /* Margin to create space */
+    overflow: hidden; /* Hide overflow for cropping */
+    border-radius: 10px; /* Rounded corners */
+	user-select: none;
+}
+
+/* Image styling */
+.image {
+    pointer-events: none;
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image if necessary */
+    border-radius: 10px; /* Rounded corners for the image */
+    transform: translate(-0px, -60px)  scale(1); /* Pindahkan gambar ke tengah secara horizontal */
+}
+
+#searchQuery {
+    padding: 6px; /* Atur padding dalam input */
+    width: calc(100% - 20px); /* Width of image container with padding */
+    margin-left: 10px; /* Margin to create space */
+    border-radius: 10px; /* Sudut input bundar */
+    border: 2px; /* Batas input */
+    background-color: #cdd6f4; /* Warna latar input */
+    outline: none;
+    text-align: center;
+}
+
+/* TABS styling */
+.tabs-container {
+    display: flex; /* Menampilkan tabs secara horizontal */
+    height: auto;
+    margin: 10px;
+    gap: 10px;
+}
+
+.tab-container {
+    flex: 1; /* Agar setiap tab mengambil lebar yang sama */
+}
+
+.tab {
+    width: calc(100% - 20px); /* Width of image container with padding */
+    height: 112px;
+    padding: 10px; /* Padding untuk memperbesar ukuran tab */
+    background-color: #1e1e2e; /* Warna latar belakang tab */
+    border-radius: 10px; /* Sudut bundar */
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column; /* Susun link secara vertikal */
+    justify-content: center; /* Posisikan link di tengah secara vertikal */
+    overflow: hidden; /* Text clipped */
+}
+
+.tab a {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    color: #cdd6f4;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 5px 0; /* Jarak vertikal antara link */
+}
+
+.tab a:hover {
+    text-decoration: underline; /* Menggarisbawahi teks saat hover */
+    color: #cba6f7;
+}
+
+
+/* Styling untuk tombol navigasi */
+.nav-buttons {
+    display: flex;
+    justify-content: center; /* Spasi antar tombol */
+    gap: 5px; /* Jarak antar tombol */
+    width: 100%; /* Membuat tombol mengambil lebar penuh */
+    margin-top: 10px;
+}
+
+.nav-button {
+    width: 10px; /* Lebar tombol */
+    height: 10px; /* Tinggi tombol */
+    border-radius: 50%; /* Tombol bulat */
+    background-color: #1e1e2e; /* Warna tombol */
+    cursor: cursor; /* Kursor tangan saat hover */
+}
+
+.nav-button:hover {
+    background-color: #cba6f7;
+}
+
+.nav-button.active {
+    background-color: #cba6f7; /* Warna untuk titik yang aktif */
+}
