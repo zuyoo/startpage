@@ -28,27 +28,27 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
-//================================================= tab bar page
+// ================================================ tabs
 // Function to show specific pages based on the selected tab
 function showPage(tabContainer, pageIndex) {
-    // Menyembunyikan semua halaman
+    // hide all pages
     const pages = tabContainer.querySelectorAll('.page-1, .page-2, .page-3, .page-4, .page-5'); // Include all pages
     pages.forEach((page) => {
         page.style.display = 'none'; // Sembunyikan semua halaman
     });
 
-    // Menampilkan halaman yang dipilih
+    // show selected pages
     if (pages[pageIndex - 1]) {
-        pages[pageIndex - 1].style.display = 'block'; // Tampilkan halaman yang dipilih
+        pages[pageIndex - 1].style.display = 'block'; // show selected pages
     }
 
-    // Mengelola status aktif untuk tombol navigasi
+    // Manage active status for navigation buttons
     const navButtons = tabContainer.parentNode.querySelectorAll('.nav-button');
     navButtons.forEach((button, index) => {
         if (index === (pageIndex - 1)) {
-            button.classList.add('active'); // Tambahkan kelas aktif untuk tombol yang sesuai
+            button.classList.add('active'); // Add active class for appropriate buttons
         } else {
-            button.classList.remove('active'); // Hapus kelas aktif dari tombol lain
+            button.classList.remove('active'); // Remove active class from another button
         }
     });
 }
@@ -58,7 +58,7 @@ document.querySelectorAll('.tab').forEach(tab => showPage(tab, 1));
 
 
 
-// =================================== container drag
+// ================================================ drag
 const container = document.querySelector('.container');
 const imageContainer = document.querySelector('.image-container');
 
