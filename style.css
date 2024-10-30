@@ -39,41 +39,42 @@ body {
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Crop the image if necessary */
     border-radius: 10px; /* Rounded corners for the image */
-    transform: translate(-0px, -60px)  scale(1); /* Pindahkan gambar ke tengah secara horizontal */
+    transform: translate(-0px, -60px)  scale(1); /* Move the image to the center horizontally */
 }
 
+/* Searchbar styling */
 #searchQuery {
-    padding: 6px; /* Atur padding dalam input */
+    padding: 6px; 
     width: calc(100% - 20px); /* Width of image container with padding */
     margin-left: 10px; /* Margin to create space */
-    border-radius: 10px; /* Sudut input bundar */
-    border: 2px; /* Batas input */
-    background-color: #cdd6f4; /* Warna latar input */
+    border-radius: 10px; 
+    border: 2px; 
+    background-color: #cdd6f4; 
     outline: none;
     text-align: center;
 }
 
 /* TABS styling */
 .tabs-container {
-    display: flex; /* Menampilkan tabs secara horizontal */
+    display: flex; /* Display tabs horizontally */
     height: auto;
     margin: 10px;
     gap: 10px;
 }
 
 .tab-container {
-    flex: 1; /* Agar setiap tab mengambil lebar yang sama */
+    flex: 1; /* each tab takes the same width */
 }
 
 .tab {
     width: calc(100% - 20px); /* Width of image container with padding */
     height: 112px;
-    padding: 10px; /* Padding untuk memperbesar ukuran tab */
-    background-color: #1e1e2e; /* Warna latar belakang tab */
-    border-radius: 10px; /* Sudut bundar */
-    display: flex; /* Gunakan flexbox */
-    flex-direction: column; /* Susun link secara vertikal */
-    justify-content: center; /* Posisikan link di tengah secara vertikal */
+    padding: 10px; /* Padding to increase the size of the tab */
+    background-color: #1e1e2e; /* Tab background color */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     overflow: hidden; /* Text clipped */
 }
 
@@ -84,30 +85,30 @@ body {
     text-decoration: none;
     text-align: center;
     display: block;
-    margin: 5px 0; /* Jarak vertikal antara link */
+    margin: 5px 0;
 }
 
 .tab a:hover {
-    text-decoration: underline; /* Menggarisbawahi teks saat hover */
+    text-decoration: underline;
     color: #cba6f7;
 }
 
 
-/* Styling untuk tombol navigasi */
+/* Navigation Button styling */
 .nav-buttons {
     display: flex;
-    justify-content: center; /* Spasi antar tombol */
-    gap: 5px; /* Jarak antar tombol */
-    width: 100%; /* Membuat tombol mengambil lebar penuh */
+    justify-content: center; /* Space between buttons */
+    gap: 5px; /* Distance between buttons */
+    width: 100%; /* Make the button take up the full width */
     margin-top: 10px;
 }
 
 .nav-button {
-    width: 10px; /* Lebar tombol */
-    height: 10px; /* Tinggi tombol */
-    border-radius: 50%; /* Tombol bulat */
-    background-color: #1e1e2e; /* Warna tombol */
-    cursor: cursor; /* Kursor tangan saat hover */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #1e1e2e;
+    cursor: cursor;
 }
 
 .nav-button:hover {
@@ -115,5 +116,5 @@ body {
 }
 
 .nav-button.active {
-    background-color: #cba6f7; /* Warna untuk titik yang aktif */
+    background-color: #cba6f7;
 }
