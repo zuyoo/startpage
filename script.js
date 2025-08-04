@@ -1,64 +1,49 @@
-// ================================================ search bar
-// Event listener for the form submission
+// ===================================
 document.getElementById("searchForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
     const query = document.getElementById("searchQuery").value;
-    
-    // Regular expression to check if the query looks like a URL
     const urlPattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,4}\/?/;
-    
-    // Check if the query matches the URL pattern
     if (urlPattern.test(query)) {
-        // If it's a URL, add "https://" if not present, then navigate to it directly
         const url = query.startsWith("http") ? query : `https://${query}`;
         window.location.href = url;
     } else {
-        // Otherwise, perform a Google search
         window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
     }
 });
 
-// === search bar shortcut
-// Event listener for keyboard shortcut
+// ===================================
 document.addEventListener("keydown", function(event) {
-    // Check if ',' is pressed and prevent the default behavior
     if (event.key === ",") {
         event.preventDefault();
-        document.getElementById("searchQuery").focus(); // Focus on the search bar
+        document.getElementById("searchQuery").focus();
     }
 });
 
-// ================================================ tabs
-// Function to show specific pages based on the selected tab
+// ===================================
 function showPage(tabContainer, pageIndex) {
-    // hide all pages
-    const pages = tabContainer.querySelectorAll('.page-1, .page-2, .page-3, .page-4, .page-5'); // Include all pages
+    const pages = tabContainer.querySelectorAll('.page-1, .page-2, .page-3, .page-4, .page-5');
     pages.forEach((page) => {
-        page.style.display = 'none'; // Sembunyikan semua halaman
+        page.style.display = 'none';
     });
 
-    // show selected pages
     if (pages[pageIndex - 1]) {
-        pages[pageIndex - 1].style.display = 'block'; // show selected pages
+        pages[pageIndex - 1].style.display = 'block';
     }
 
-    // Manage active status for navigation buttons
     const navButtons = tabContainer.parentNode.querySelectorAll('.nav-button');
     navButtons.forEach((button, index) => {
         if (index === (pageIndex - 1)) {
-            button.classList.add('active'); // Add active class for appropriate buttons
+            button.classList.add('active');
         } else {
-            button.classList.remove('active'); // Remove active class from another button
+            button.classList.remove('active');
         }
     });
 }
 
-// Initialize and show the first page on load
+// ===================================
 document.querySelectorAll('.tab').forEach(tab => showPage(tab, 1));
 
-
-
-// ================================================ drag
+// ===================================
 const container = document.querySelector('.container');
 const imageContainer = document.querySelector('.image-container');
 
@@ -73,11 +58,9 @@ imageContainer.addEventListener('mousedown', (e) => {
 
 document.addEventListener('mousemove', (e) => {
     if (isDragging) {
-        // Calculate new position
         const newX = e.clientX - offsetX;
         const newY = e.clientY - offsetY;
 
-        // Ensure the container stays within viewport boundaries
         const maxLeft = window.innerWidth - container.offsetWidth;
         const maxTop = window.innerHeight - container.offsetHeight;
         container.style.left = `${Math.max(0, Math.min(newX, maxLeft))}px`;
@@ -91,7 +74,7 @@ document.addEventListener('mouseup', () => {
 
 
 imageContainer.addEventListener('mousedown', (e) => {
-    e.preventDefault(); // Prevents text/image selection
+    e.preventDefault();
     isDragging = true;
     offsetX = e.clientX - container.getBoundingClientRect().left;
     offsetY = e.clientY - container.getBoundingClientRect().top;
