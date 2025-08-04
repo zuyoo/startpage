@@ -1,88 +1,84 @@
-/* General styling */
 body {
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #11111b; /* Background color for the page */
+    background-color: #11111b;
 }
 
-/* Container styling */
 .container {
-    width: 700px; /* Width of the container */
-    height: auto; /* Height will be dynamic based on content */
-    max-width: calc(100% - 20px); /* Maximum width of the container */
-    max-height: calc(100% - 20px); /* Maximum height of the container */
-    background-color: #181825; /* Background color of the container */
-    border-radius: 10px; /* Rounded corners */
-    border: solid 2px #cba6f7; /* Border styling */
-    position: absolute; /* Use relative positioning */
-    overflow: hidden; /* Hide overflow */
+    width: 700px;
+    height: auto;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    background-color: #181825;
+    border-radius: 10px;
+    border: solid 2px #f38ba8;
+    position: absolute;
+    overflow: hidden;
 }
 
-/* Image container styling */
 .image-container {
-    width: calc(100% - 20px); /* Width of image container with padding */
-    height: 180px; /* Fixed height for the image */
-    margin: 10px; /* Margin to create space */
-    overflow: hidden; /* Hide overflow for cropping */
-    border-radius: 10px; /* Rounded corners */
+    width: calc(100% - 20px);
+    height: 240px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
 	user-select: none;
 }
 
-/* Image styling */
 .image {
     pointer-events: none;
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Crop the image if necessary */
-    border-radius: 10px; /* Rounded corners for the image */
-    transform: translate(-0px, -60px)  scale(1); /* Move the image to the center horizontally */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: translate(-0px, -140px);
 }
 
-/* Searchbar styling */
 #searchQuery {
     padding: 6px; 
-    width: calc(100% - 20px); /* Width of image container with padding */
-    margin-left: 10px; /* Margin to create space */
-    border-radius: 10px; 
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    border-radius: 8px; 
     border: 2px; 
-    background-color: #cdd6f4; 
+    background-color: #1e1e2e; 
     outline: none;
     text-align: center;
+    font-family: monospace;
+    font-size: 16px;
+    color: #f38ba8;
 }
 
-/* TABS styling */
 .tabs-container {
-    display: flex; /* Display tabs horizontally */
-    flex-wrap: wrap; /* Allow tabs to wrap to the next line */
+    display: flex;
+    flex-wrap: wrap;
     height: auto;
     margin: 10px;
     gap: 10px;
 }
 
 .tab-container {
-    flex: 1; /* each tab takes the same width */
+    flex: 1;
 }
 
 .tab {
-    width: calc(100% - 20px); /* Width of image container with padding */
-    height: 112px;
-    padding: 10px; /* Padding to increase the size of the tab */
-    background-color: #1e1e2e; /* Tab background color */
+    width: calc(100% - 20px);
+    height: 120px;
+    padding: 10px;
+    background-color: #1e1e2e;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden; /* Text clipped */
+    overflow: hidden;
 }
 
 .tab a {
-    font-family: 'SF Pro Display', sans-serif;
     font-size: 16px;
-    color: #cdd6f4;
+    color: #94e2d5;
     text-decoration: none;
     text-align: center;
     display: block;
@@ -90,16 +86,15 @@ body {
 }
 
 .tab a:hover {
-    text-decoration: underline;
-    color: #cba6f7;
+    /*text-decoration: underline;*/
+    color: #f38ba8;
 }
 
-/* Navigation Button styling */
 .nav-buttons {
     display: flex;
-    justify-content: center; /* Space between buttons */
-    gap: 5px; /* Distance between buttons */
-    width: 100%; /* Make the button take up the full width */
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -108,18 +103,17 @@ body {
     height: 10px;
     border-radius: 50%;
     background-color: #1e1e2e;
-    cursor: pointer;
+    cursor: default; /* default / pointer */
 }
 
 .nav-button:hover {
-    background-color: #cba6f7;
+    background-color: #f38ba8;
 }
 
 .nav-button.active {
-    background-color: #cba6f7;
+    background-color: #f38ba8;
 }
 
-/* Responsive styling */
 @media (max-width: 600px) {
     .tabs-container {
         display: grid;
@@ -128,10 +122,10 @@ body {
     }
 
     .tab-container {
-        flex: none; /* Reset flex */
+        flex: none;
     }
 
     .container {
-        height: auto; /* Automatically adjust the height based on the content */
+        height: auto;
     }
 }
