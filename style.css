@@ -35,7 +35,7 @@ body {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    transform: translate(-0px, -140px);
+    transform: translate(-0px, -60px);
 }
 
 #searchQuery {
@@ -129,3 +129,4 @@ body {
         height: auto;
     }
 }
+
